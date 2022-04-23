@@ -1,0 +1,14 @@
+{% macro active(activePage='Home') %}
+<div class="gnb">
+    <div class="gnb--head">
+
+    </div>
+    <div class="gnb--body">
+        <nav>
+            <a href="index.html" class="{%if activePage == 'Home' %}is-active{% endif %}">Home</a>
+            <a href="popup.html" class="{%if activePage == 'Popup' %}is-active{% endif %}">Popup</a>
+            <a href="gsap.html" class="{%if activePage == 'Gsap' %}is-active{% endif %}">Gsap</a>
+        </nav>
+    </div>
+</div>
+{% endmacro %}
