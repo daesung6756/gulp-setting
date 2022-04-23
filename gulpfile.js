@@ -8,7 +8,6 @@ const gulp = require('gulp'),
       sourcemaps = require ('gulp-sourcemaps'),
       postcss = require ('gulp-postcss'),
       autoprefixer = require ('autoprefixer'),
-      fileInclude = require('gulp-file-include'),
       nodemon = require('gulp-nodemon'),
       browserSync = require('browser-sync').create(),
       babel = require('gulp-babel'),
@@ -19,10 +18,6 @@ const gulp = require('gulp'),
       nunjucksRender = require('gulp-nunjucks-render'),
       data = require('gulp-data'),
       imagemin = require('gulp-imagemin'),
-      imageminPngquant = require('imagemin-pngquant'),
-      imageminZopfli = require('imagemin-zopfli'),
-      imageminMozjpeg = require('imagemin-mozjpeg'),
-      imageminGiflossy = require('imagemin-giflossy'),
       htmlbeautify = require('gulp-html-beautify');
 
 const apfBrwsowsers = [
@@ -77,7 +72,6 @@ gulp.task('html', () => {
     return gulp.src([
         'src/page/*',
         '!' + 'src/page/include' ])
-        .pipe(fileInclude({prefix: '@@', basepath: 'src/page/include'}))
         .pipe(data(function() {
             return require('./src/data.json')
         }))
