@@ -1,19 +1,20 @@
-<!-- layout.nunjucks -->
-{% extends "layout.nunjucks.html" %}
+{% extends 'layout.html' %}
 
 <!-- header -->
 {% block header %}
-<!-- gnb -->
-{% import 'macros/nav-macro.nunjucks.html' as gnb %}
-{{gnb.active('Gsap')}}
-<!-- //gnb -->
-<h1>이곳은 GSAP 페이지 입니다.</h1>
+<header id="header" class="header">
+    <div class="header--inner">
+        이곳은 Gsap 페이지 입니다.
+        <!-- gnb -->
+        {% import 'macros/gnb-macro.html' as gnb %}
+        {{gnb.active('Gsap')}}
+        <!-- //gnb -->
+    </div>
+</header>
 {% endblock %}
-<!--//header -->
-
+<!-- //header -->
 <!-- content -->
 {% block content %}
-
 <section id="section1">
     <p>section1</p>
 </section>
@@ -37,12 +38,10 @@
 <section id="section4">
     <p>section4</p>
 </section>
-
 {% endblock %}
 <!-- //content -->
-
-<!-- wrapper next -->
-{% block wrapperNext %}
+<!-- wrapper bottom -->
+{% block wrapperBottom %}
 <script>
     const $sections = $(".horizon_box");
     const tl = gsap.timeline({
@@ -58,4 +57,4 @@
         .to({},{duration:1});
 </script>
 {% endblock %}
-<!-- //wrapper nxet -->
+<!-- //wrapper bottom -->

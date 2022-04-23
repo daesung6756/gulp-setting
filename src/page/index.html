@@ -1,21 +1,22 @@
-<!-- layout.nunjucks -->
-{% extends "layout.nunjucks.html" %}
+{% extends 'layout.html' %}
 
 <!-- header -->
 {% block header %}
-    <!-- gnb -->
-    {% import 'macros/nav-macro.nunjucks.html' as gnb %}
-    {{gnb.active('Home')}}
-    <!-- //gnb -->
-    <h1>이곳은 메인 페이지 입니다.</h1>
+<header id="header" class="header">
+    <div class="header--inner">
+        이곳은 Swiper 페이지 입니다.
+        <!-- gnb -->
+        {% import 'macros/gnb-macro.html' as gnb %}
+        {{gnb.active('Home')}}
+        <!-- //gnb -->
+    </div>
+</header>
 {% endblock %}
 <!-- //header -->
-
 <!-- content -->
 {% block content %}
-    <section class="content"><!-- default 1280px / add _wide 100% -->
+<section class="content"><!-- default 1280px / add _wide 100% -->
         <p>이곳은 컨텐츠 영역입니다.</p>
-
         <!-- main ccarousel -->
         <div class="swiper">
             <!-- Additional required wrapper -->
@@ -39,13 +40,12 @@
             <div class="swiper-button-next"></div>
         </div>
         <!-- //main ccarousel -->
-    </section>
+</section>
 {% endblock %}
 <!-- //content -->
 
-
-{% block wrapperNext %}
-    <script>
+{% block wrapperBottom %}
+<script>
     const swiperOption = {
         loop: true,
         pagination: {

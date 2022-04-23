@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목 입력</title>
+    <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="SHORTCUT ICON" href="assets/images/favicons/favicon.ico">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/vendor/vendor.css">
+    <script type="text/javascript" src="assets/js/vendor/vendor.js"></script>
+</head>
+<body>
+    <!-- skip -->
+    {% include 'include/skip.html' %}
+    <!-- //skip -->
+    <!-- wrapper : Start -->
+    <div class="wrapper">
+        {% block header %}
+        {% endblock %}
+        <!-- main container : Start -->
+        <main id="main" class="container">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <!-- //main container : Start -->
+        <!-- footer : Start -->
+        {% include 'include/footer.html' %}
+        <!-- //footer : End-->
+    </div>
+    {% block wrapperBottom %}
+    {% endblock %}
+    <!-- wrapper : End -->
+    <script type="text/javascript" src="assets/js/common-pub.js"></script>
+</body>
+</html>
