@@ -1,0 +1,61 @@
+<!-- layout.nunjucks -->
+{% extends "layout.nunjucks.html" %}
+
+<!-- header -->
+{% block header %}
+    <!-- gnb -->
+    {% import 'macros/nav-macro.nunjucks.html' as gnb %}
+    {{gnb.active('Home')}}
+    <!-- //gnb -->
+    <h1>이곳은 메인 페이지 입니다.</h1>
+{% endblock %}
+<!-- //header -->
+
+<!-- content -->
+{% block content %}
+    <section class="content"><!-- default 1280px / add _wide 100% -->
+        <p>이곳은 컨텐츠 영역입니다.</p>
+
+        <!-- main ccarousel -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                {% for item in mainCarousel %}
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="{{item.src}}" alt="{{item.alt}}">
+                    <div>
+                        <p>{{item.title}}</p>
+                        <p>{{item.desc}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <!-- //main ccarousel -->
+    </section>
+{% endblock %}
+<!-- //content -->
+
+
+{% block wrapperNext %}
+    <script>
+    const swiperOption = {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    }
+    const swiper = new Swiper ('.swiper', swiperOption );
+</script>
+{% endblock %}

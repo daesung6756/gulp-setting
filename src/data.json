@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "src": "image-one.png",
+      "alt": "Image one alt text"
+    }, {
+      "src": "image-two.png",
+      "alt": "Image two alt text"
+    }
+  ],
+  "mainCarousel": [
+    {
+      "src": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+      "alt": "테스트 입니다.",
+      "title": "테스트 입니다.",
+      "desc": "테스트 입니다."
+    },
+    {
+      "src": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+      "alt": "테스트 입니다.",
+      "title": "테스트 입니다.",
+      "desc": "테스트 입니다."
+    }
+  ]
+}

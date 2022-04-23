@@ -1,0 +1,60 @@
+<!-- layout.nunjucks -->
+{% extends "layout.nunjucks.html" %}
+
+<!-- header -->
+{% block header %}
+    <!-- gnb -->
+    {% import 'macros/nav-macro.nunjucks.html' as gnb %}
+    {{gnb.active('About')}}
+    <!-- //gnb -->
+    <h1>이곳은 어바웃 페이지 입니다.</h1>
+{% endblock %}
+<!--//header -->
+
+<!-- content -->
+{% block content %}
+    <section class="content _wide"><!-- default 1280px / add _wide 100% -->
+        <p>이곳은 컨텐츠 영역입니다.</p>
+        <button type="button" data-popup-open="popupTest">팝업 열기</button>
+
+    </section>
+
+{% endblock %}
+<!-- //content -->
+
+<!-- wrapper next -->
+{% block wrapperNext %}
+    <!-- popup : Start -->
+    <!--
+        data-popup = name
+        data-popup-open = name
+        data-popup-close = name
+    -->
+    <div class="popup is-dim" data-popup="popupTest"><!-- default layer popup / add is-dim dimmed layer  -->
+        <div class="popup--inner">
+            <div class="popup--wrap">
+                <div class="head">
+                    <div class="head--inner">
+                        <strong>팝업 제목이 들어갑니다.</strong>
+                        <button type="button" class="popup-close" data-popup-close="popupTest"><i class="icon"></i><span class="blind">닫기</span></button>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="body--inner">
+                        <!-- 팝업 컨텐츠 -->
+                        팝업 컨텐츠
+                        <!-- //팝업 컨텐츠 -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="foot--inner">
+                        <button type="button" data-popup-close="popupTest">취소</button>
+                        <button type="button" data-popup-close="popupTest">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup : End -->
+{% endblock %}
+<!-- //wrapper nxet -->
