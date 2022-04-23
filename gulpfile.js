@@ -13,7 +13,6 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create(),
       babel = require('gulp-babel'),
       del = require('del'),
-      prettyHtml = require('gulp-pretty-html'),
       concat = require('gulp-concat'),
       concatCss = require('gulp-concat-css'),
       cleanCSS = require('gulp-clean-css'),
@@ -24,13 +23,7 @@ const gulp = require('gulp'),
       imageminZopfli = require('imagemin-zopfli'),
       imageminMozjpeg = require('imagemin-mozjpeg'),
       imageminGiflossy = require('imagemin-giflossy'),
-      through2 = require("through2"),
-      pretty = require("pretty");
-
-function prettyGulp(file, enc, callback){
-    file.contents = Buffer.from(pretty(file.contents.toString(), { ocd: true}));
-    callback(null, file);
-}
+      htmlbeautify = require('gulp-html-beautify');
 
 const apfBrwsowsers = [
     'ie >= 8',
@@ -103,18 +96,20 @@ gulp.task( 'scss', () => {
 
 // HTML
 gulp.task('html', () => {
+    const options = {
+        indentSize: 2
+    };
     return gulp.src([
         './src/page/*',
         '!' + './src/page/include' ])
-        .pipe(fileInclude({prefix: '@@', basepath: 'src/page/include'}))
+        .pipe(fileInclude({prefix: '@@', basepath: './src/page/include'}))
         .pipe(data(function() {
             return require('./src/data.json')
         }))
         .pipe(nunjucksRender({
             path: ['./src/templates']
         }))
-        .pipe(through2.obj(prettyGulp))
-        .pipe(prettyHtml())
+        .pipe(htmlbeautify(options))
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({ stream : true }));
 })
