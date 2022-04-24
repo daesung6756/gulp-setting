@@ -26,11 +26,13 @@ gulp
 │  ├─fonts
 │  ├─images
 │  │  ├─favicons
-│  │  └─icons
+│  │  ├─icons
+│  │  └─ ... 
 │  ├─js
 │  ├─scss
 │  │  ├─components
 │  │  └─import
+│  ├──sprite
 │  └─vendor
 │      ├─css
 │      └─js

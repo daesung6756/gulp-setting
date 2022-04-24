@@ -1,0 +1,83 @@
+/* en */
+@font-face {
+  font-family: 'HankookTire';
+  font-weight:300;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFLight.woff') format('woff'),
+  url('assets/fonts/HankookTTFLight.otf') format('opentype'),
+  url('assets/fonts/HankookTTFLight.svg#HankookTTFLight') format('svg');
+}
+@font-face {
+  font-family: 'HankookTire';
+  font-weight:400;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFRegular.woff') format('woff'),
+  url('assets/fonts/HankookTTFRegular.otf') format('opentype'),
+  url('assets/fonts/HankookTTFRegular.svg#HankookTTFRegular') format('svg');
+}
+@font-face {
+  font-family: 'HankookTire';
+  font-weight:500;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFMedium.woff') format('woff'),
+  url('assets/fonts/HankookTTFMedium.otf') format('opentype'),
+  url('assets/fonts/HankookTTFMedium.svg#HankookTTFMedium') format('svg');
+}
+@font-face {
+  font-family: 'HankookTire';
+  font-weight:700;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFSemibold.woff') format('woff'),
+  url('assets/fonts/HankookTTFSemibold.ttf') format('truetype'),
+  url('assets/fonts/HankookTTFSemibold.svg#HankookTTFBold') format('svg');
+}
+@font-face {
+  font-family: 'HankookTire';
+  font-weight:800;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFBold.woff') format('woff'),
+  url('assets/fonts/HankookTTFBold.ttf') format('truetype'),
+  url('assets/fonts/HankookTTFBold.svg#HankookTTFBold') format('svg');
+}
+/* korea */
+@font-face {
+  font-family: 'HankookTireKR';
+  font-weight:300;
+  font-style:normal;
+  src: url('assets/fonts/HankookKRTTFLight.woff') format('woff'),
+  url('assets/fonts/HankookKRTTFLight.ttf') format('truetype'),
+  url('assets/fonts/HankookKRTTFLight.svg#HankookTTFBold') format('svg');
+}
+@font-face {
+  font-family: 'HankookTireKR';
+  font-weight:400;
+  font-style:normal;
+  src: url('assets/fonts/HankookKRTTFRegular.woff') format('woff'),
+  url('assets/fonts/HankookKRTTFRegular.ttf') format('truetype'),
+  url('assets/fonts/HankookKRTTFRegular.svg#HankookTTFBold') format('svg');
+}
+@font-face {
+  font-family: 'HankookTireKR';
+  font-weight:500;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFMedium.woff') format('woff'),
+  url('assets/fonts/HankookTTFMedium.otf') format('opentype'),
+  url('assets/fonts/HankookTTFMedium.svg#HankookTTFMedium') format('svg');
+}
+@font-face {
+  font-family: 'HankookTireKR';
+  font-weight:700;
+  font-style:normal;
+  src: url('assets/fonts/HankookTTFSemibold.woff') format('woff'),
+  url('assets/fonts/HankookTTFSemibold.ttf') format('truetype'),
+  url('assets/fonts/HankookTTFSemibold.svg#HankookTTFBold') format('svg');
+}
+
+@font-face {
+  font-family: 'HankookTireKR';
+  font-weight:900;
+  font-style:normal;
+  src: url('assets/fonts/HankookKRTTFBold.woff') format('woff'),
+  url('assets/fonts/HankookKRTTFBold.ttf') format('truetype'),
+  url('assets/fonts/HankookKRTTFBold.svg#HankookTTFBold') format('svg');
+}
