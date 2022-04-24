@@ -7,14 +7,14 @@
     <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
     <link rel="SHORTCUT ICON" href="assets/images/favicons/favicon.ico">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/vendor/vendor.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
     <script type="text/javascript" src="assets/js/vendor/vendor.js"></script>
 </head>
 <body>
     <!-- skip -->
-    {% include 'include/skip.html' %}
+    {% include 'include/skip.njk' %}
     <!-- //skip -->
     <!-- wrapper : Start -->
     <div class="wrapper">
@@ -27,7 +27,7 @@
         </main>
         <!-- //main container : Start -->
         <!-- footer : Start -->
-        {% include 'include/footer.html' %}
+        {% include 'include/footer.njk' %}
         <!-- //footer : End-->
     </div>
     {% block wrapperBottom %}

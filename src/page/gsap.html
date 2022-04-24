@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout.njk' %}
 
 <!-- header -->
 {% block header %}
@@ -6,7 +6,7 @@
     <div class="header--inner">
         이곳은 Gsap 페이지 입니다.
         <!-- gnb -->
-        {% import 'macros/gnb-macro.html' as gnb %}
+        {% import 'macros/gnb-macro.njk' as gnb %}
         {{gnb.active('Gsap')}}
         <!-- //gnb -->
     </div>
@@ -42,6 +42,20 @@
 <!-- //content -->
 <!-- wrapper bottom -->
 {% block wrapperBottom %}
+<style>
+    * { margin: 0; }
+    body { margin: 0; }
+    section { position: relative; width: 100%; height: 100vh; }
+    #section1 { background: yellowgreen; }
+    #section2 { background: goldenrod; overflow: hidden; }
+    #section3 { background: indianred; }
+    #section4 { background: paleturquoise; }
+    .horizon_box { position: absolute; top: 0; left: 100%; }
+    .box { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; }
+    .box h1 { font-size: 50px; text-align: center; }
+    .box2 { background: crimson; }
+    .box3 { background: darkorchid; }
+</style>
 <script>
     const $sections = $(".horizon_box");
     const tl = gsap.timeline({

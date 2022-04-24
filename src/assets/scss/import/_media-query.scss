@@ -1,8 +1,9 @@
-@include tablet(){
-
-}
 @include mobile(){
 
+}
+@include tablet(){
+  //spite
+  $sprite-url : "assets/images/sprite@2x.png";
 }
 @include desktop(){
 

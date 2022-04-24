@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout.njk' %}
 
 <!-- header -->
 {% block header %}
@@ -6,7 +6,7 @@
     <div class="header--inner">
         이곳은 Popup 페이지 입니다.
         <!-- gnb -->
-        {% import 'macros/gnb-macro.html' as gnb %}
+        {% import 'macros/gnb-macro.njk' as gnb %}
         {{gnb.active('Popup')}}
         <!-- //gnb -->
     </div>

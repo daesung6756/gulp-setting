@@ -1,0 +1,19 @@
+.skip--nav {
+  position:relative;
+  font-size:0;
+  > a {
+    position: absolute;
+    left:0;
+    top:-20px;
+    border:1px solid #fff;
+    color:#fff;
+    background:#333;
+    line-height:1;
+    font-size:12px;
+    text-align: center;
+    &:active,
+    &:focus {
+      top:0;
+    }
+  }
+}

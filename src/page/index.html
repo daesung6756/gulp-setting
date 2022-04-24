@@ -1,16 +1,16 @@
-{% extends 'layout.html' %}
+{% extends 'layout.njk' %}
 
 <!-- header -->
 {% block header %}
-<header id="header" class="header">
-    <div class="header--inner">
-        이곳은 Swiper 페이지 입니다.
-        <!-- gnb -->
-        {% import 'macros/gnb-macro.html' as gnb %}
-        {{gnb.active('Home')}}
-        <!-- //gnb -->
-    </div>
-</header>
+    <header id="header" class="header">
+        <div class="header--inner">
+            이곳은 Swiper 페이지 입니다.
+            <!-- gnb -->
+            {% import 'macros/gnb-macro.njk' as gnb %}
+            {{gnb.active('Home')}}
+            <!-- //gnb -->
+        </div>
+    </header>
 {% endblock %}
 <!-- //header -->
 <!-- content -->

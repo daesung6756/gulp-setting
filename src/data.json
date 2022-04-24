@@ -1,13 +1,4 @@
 {
-  "images": [
-    {
-      "src": "image-one.png",
-      "alt": "Image one alt text"
-    }, {
-      "src": "image-two.png",
-      "alt": "Image two alt text"
-    }
-  ],
   "mainCarousel": [
     {
       "src": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",

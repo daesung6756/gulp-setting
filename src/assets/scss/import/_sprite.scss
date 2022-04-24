@@ -1,0 +1,23 @@
+    .sp {
+    display: block;
+    flex-shrink: 0;
+    background-image: url($sprite-url);
+    background-repeat: no-repeat;
+    background-size: 517px 517px;
+    }
+
+    .sp-icon-like-hand {
+    width: 256px;
+    height: 256px;
+    background-position: 0px 0px;
+    }
+    .sp-icon-star-black {
+    width: 256px;
+    height: 256px;
+    background-position: -261px 0px;
+    }
+    .sp-icon-start-black-line {
+    width: 256px;
+    height: 256px;
+    background-position: 0px -261px;
+    }
