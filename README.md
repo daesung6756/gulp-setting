@@ -1,5 +1,5 @@
 node -v
-v14.18.1
+v14.18.1  ( 상위 버전 사용시 visual c++ runtime error 발생 )
 
 npm install gulp -g
 
@@ -8,26 +8,30 @@ npm i
 gulp
 
 ------------------------------
+
 1. 폴더 구조
+
 /dist
+```
 ├─assets
 │  ├─fonts
 │  ├─images
-│  │  ├─favicons
-│  │  └─icons
+│  │    ├─favicons
+│  │    └─icons
 │  ├─js
-│  │  └─vendor
+│  │   └─vendor
 │  └─css
-│     └─vendor
+│       └─vendor
 └─guide
-
+```
 /src
-├─assets
+```
+├─ assets
 │  ├─fonts
 │  ├─images
 │  │  ├─favicons
 │  │  ├─icons
-│  │  └─ ... 
+│  │  └─ ...
 │  ├─js
 │  ├─scss
 │  │  ├─components
@@ -40,8 +44,8 @@ gulp
 │  └─guide
 └─templates
       ├─include
-      └─macros 
-
+      └─macros
+```
 
 2. 파일 설명
 - .gitignore 깃 이그놀 파일에는 깃 에서 관리 안하겠다고 선언한 파일들이 들어있습니다.

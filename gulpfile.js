@@ -86,6 +86,8 @@ gulp.task('sprite', function() {
         .pipe(gulp.dest(spConfig.destCssPath));
 
     return merge(imgStream, cssStream)
+    .pipe(buffer())
+    .pipe(browserSync.reload({ stream : true }));
 });
 
 // SCSS
