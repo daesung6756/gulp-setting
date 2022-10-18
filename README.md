@@ -5,8 +5,12 @@ npm install gulp -g
 
 npm i
 
-gulp
-
+```
+gulp --development
+```
+```
+gulp --production
+```
 ------------------------------
 
 1. 폴더 구조
