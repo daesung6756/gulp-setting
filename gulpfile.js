@@ -214,7 +214,7 @@ gulp.task('watch', async function()  {
         gulp.watch('src/assets/sprite/**/*.png', gulp.series(['images:sprite']))
     ]
 });
-
-gulp.task('dev', gulp.series([ 'copy:fonts', 'images:minify', 'images:sprite', 'scss:dev', 'script:dev', 'vendorJs:build', 'vendorCss:build', 'html:build', 'webServer','browserSync','watch']));
+gulp.task('default', gulp.series([ 'copy:fonts', 'images:minify', 'images:sprite', 'scss:dev', 'script:dev', 'vendorJs:build', 'vendorCss:build', 'html:build', 'webServer','browserSync','watch']));
+gulp.task('dev', gulp.series(['clean', 'default']));
 gulp.task('build', gulp.series(['clean', 'copy:fonts', 'images:minify', 'images:sprite', 'scss:build', 'script:build', 'vendorJs:build', 'vendorCss:build','html:build','webServer','browserSync']));
 

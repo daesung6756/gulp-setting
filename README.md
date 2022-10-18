@@ -6,10 +6,13 @@ npm install gulp -g
 npm i
 
 ```
-gulp dev (develoment)
+gulp (none clean)
 ```
 ```
-gulp build (production)
+gulp dev (clean develoment)
+```
+```
+gulp build (clean production)
 ```
 ------------------------------
 
