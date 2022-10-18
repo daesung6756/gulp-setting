@@ -6,10 +6,10 @@ npm install gulp -g
 npm i
 
 ```
-gulp --development
+gulp dev (develoment)
 ```
 ```
-gulp --production
+gulp build (production)
 ```
 ------------------------------
 
