@@ -1,0 +1,35 @@
+.table-set {
+  width:100%;
+  table-layout: fixed;
+  caption {
+    font-size:0;
+  }
+  thead {
+    th {
+      text-align:center;
+      font-size:1rem;
+      padding:1rem .4rem;
+      border-bottom:1px solid #999;
+      background-color: #007aff;
+      color:#fff;
+      font-weight:800;
+      & + th {
+        border-left:1px solid #5f96ff;
+      }
+    }
+  }
+  tbody {
+    tr:hover {
+      background:#efefef;
+    }
+
+    td {
+      text-align:center;
+      padding:.6rem .4rem;
+      border-bottom:1px solid #ccc;
+      & + td {
+        border-left:1px solid #ccc;
+      }
+    }
+  }
+}

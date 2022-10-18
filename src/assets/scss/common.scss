@@ -1,6 +1,7 @@
 @charset "utf-8";
+@import "import/reset";
 @import "import/import";
-@import "components/components";
+@import "components/layout";
 
 html {
   background:#ddd;
@@ -10,4 +11,5 @@ html {
   .header {
     background:#ddd;
   }
+
 }

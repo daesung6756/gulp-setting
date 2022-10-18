@@ -1,6 +1,6 @@
 "use strict";
 // 요청 모듈 정의 ES
-    const
+    var
         gulp = require('gulp'),
         cache = require('gulp-cache'),
         scss = require('gulp-sass')(require('sass')),
@@ -25,7 +25,7 @@
         buffer = require('vinyl-buffer'),
         merge = require('merge-stream');
 
-const apfBrwsowsers = [
+var apfBrwsowsers = [
     'ie >= 11',
 ];
 
@@ -53,7 +53,7 @@ gulp.task('images',() => {
 
 // SPRITE IMAGES 명령어 gulp sprite
 gulp.task('sprite', function() {
-    const spConfig = {
+    var spConfig = {
         targetImgPath: './src/assets/sprite/*.png',
         targetRetinaImgPath: './src/assets/sprite/*@2x.png',
         destImgName: 'sprite.png',
@@ -63,7 +63,7 @@ gulp.task('sprite', function() {
         destCssPath: './src/assets/scss/import',
         destCssTemplate:'./src/assets/sprite/handlebarsStr.css.handlebars'
     }
-    const spriteData = gulp.src(spConfig.targetImgPath)
+    var spriteData = gulp.src(spConfig.targetImgPath)
         .pipe(plumber())
         .pipe(spritesmith({
             retinaSrcFilter: spConfig.targetRetinaImgPath,
@@ -74,13 +74,13 @@ gulp.task('sprite', function() {
             cssTemplate: spConfig.destCssTemplate,
         }));
 
-    const imgStream = spriteData.img
+    var imgStream = spriteData.img
         .pipe(buffer())
         .pipe(plumber())
         .pipe(cache(imagemin()))
         .pipe(gulp.dest(spConfig.destImgPath));
 
-    const cssStream = spriteData.css
+    var cssStream = spriteData.css
         .pipe(buffer())
         .pipe(plumber())
         .pipe(gulp.dest(spConfig.destCssPath));
@@ -92,15 +92,15 @@ gulp.task('sprite', function() {
 
 // SCSS
 gulp.task( 'scss:compiler', () => {
-    const options = {
+    var options = {
         postcss: [ autoprefixer ({overrideBrowserslist: apfBrwsowsers,})]
     };
-    return gulp.src('src/assets/scss/*.scss')
+    return gulp.src('src/assets/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(scss({
                 fiber:Fiber,
-                outputStyle: 'expanded', //compressed , expanded ,compact ,nested
+                outputStyle: 'compressed', //compressed , expanded ,compact ,nested
                 indentType: 'space',
                 indentWidth: 1,
                 compiler: dartSsss,
@@ -113,10 +113,10 @@ gulp.task( 'scss:compiler', () => {
 
 // HTML
 gulp.task('html', () => {
-    const options = {
+    var options = {
         indentSize: 2
     };
-    return gulp.src('src/page/*')
+    return gulp.src('src/page/**/*.html')
         .pipe(plumber())
         .pipe(data(function() {
             return require('./src/data.json')
@@ -205,11 +205,10 @@ gulp.task('watch', () =>  {
         gulp.watch('src/assets/js/**/*.js', gulp.series('script:compiler')),
         gulp.watch('src/assets/sprite/**/*.png', gulp.series('sprite'))
     ]
-
 });
 
-// index
-const series = gulp.series([
+// default
+var series = gulp.series([
     'clean',
     'vendor:js',
     'vendor:js map',
