@@ -18,6 +18,7 @@
 <section class="content _wide"><!-- default 1280px / add _wide 100% -->
     <p>이곳은 컨텐츠 영역입니다.</p>
     <button type="button" data-popup-open="popupTest">팝업 열기</button>
+    <button type="button" data-popup-open="popupTest2">팝업 열기3</button>
 </section>
 {% endblock %}
 <!-- //content -->
@@ -54,6 +55,31 @@
             </div>
         </div>
     </div>
+    <div class="popup" data-popup="popupTest2"><!-- default layer popup / add is-dim dimmed layer  -->
+    <div class="popup--inner">
+        <div class="popup--wrap">
+            <div class="head">
+                <div class="head--inner">
+                    <strong>팝업 제목이 들어갑니다.</strong>
+                    <button type="button" class="popup-close" data-popup-close="popupTest2"><i class="icon"></i><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="body">
+                <div class="body--inner">
+                    <!-- 팝업 컨텐츠 -->
+                    안녕하세요.
+                    <!-- //팝업 컨텐츠 -->
+                </div>
+            </div>
+            <div class="foot">
+                <div class="foot--inner">
+                    <button type="button" data-popup-close="popupTest2">취소</button>
+                    <button type="button" data-popup-close="popupTest2">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- //popup : End -->
 {% endblock %}
 <!-- //wrapper bottom -->

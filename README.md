@@ -3,6 +3,12 @@ v14.18.1  ( 상위 버전 사용시 visual c++ runtime error 발생 )
 
 npm install gulp -g
 
+npm install gulp --D (--save-dev)
+
+- 처음 제작시에 package.json을 생성 하기 위해
+npm init -y
+
+- package.json에 설치 된 모듈이 있을 경우 
 npm i
 
 ```
@@ -18,7 +24,7 @@ gulp build (clean production)
 
 1. 폴더 구조
 
-/dist
+/build
 ```
 ├─assets
 │  ├─fonts
@@ -47,7 +53,7 @@ gulp build (clean production)
 │  └─vendor
 │      ├─css
 │      └─js
-├─page
+├─pages
 │  └─guide
 └─templates
       ├─include
