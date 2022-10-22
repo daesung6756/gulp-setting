@@ -96,7 +96,7 @@ gulp.task('scss:dev', async function () {
         compiler: dartSsss,
     })).on('error', scss.logError)
     .pipe(postcss(options.postcss))
-    .pipe( sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/assets/css'))
     .pipe(browserSync.reload({ stream : true }));
 })
@@ -180,12 +180,12 @@ gulp.task('vendorCss:build', async function() {
 });
 
 var watchCommon = function () {
-    gulp.watch('src/assets/images/**/*.*', gulp.series(['images:minify'])),
-    gulp.watch('src/assets/fonts/**/*.*', gulp.series(['copy:fonts'])),
-    gulp.watch('src/assets/vendor/js/**/*.js', gulp.series(['vendorJs:build'])),
-    gulp.watch('src/assets/vendor/css/**/*.js', gulp.series(['vendorCss:build'])),
-    gulp.watch('src/assets/sprite/**/*.png', gulp.series(['images:sprite'])),
     gulp.watch('src/pages/**/**/**/*.+(html|njk)', gulp.series(['template:build']))
+    gulp.watch('src/assets/images/**/*.*', gulp.series(['images:minify']))
+    gulp.watch('src/assets/fonts/**/*.*', gulp.series(['copy:fonts']))
+    gulp.watch('src/assets/vendor/js/**/*.js', gulp.series(['vendorJs:build']))
+    gulp.watch('src/assets/vendor/css/**/*.js', gulp.series(['vendorCss:build']))
+    gulp.watch('src/assets/sprite/**/*.png', gulp.series(['images:sprite']))
 }
 
 gulp.task('watch:dev', async function()  {

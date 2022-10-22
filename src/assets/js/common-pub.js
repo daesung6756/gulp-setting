@@ -9,7 +9,6 @@ const UI = {
     popups : () => {
         console.log("popups init")
         let popupGroup = [];
-        let dimmed = '<div class="dimmed"></div>';
 
         $("[data-popup]").each(function() {
             if($.inArray($(this).data("popup") , popupGroup ) === -1){
