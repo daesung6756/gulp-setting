@@ -22,7 +22,8 @@ var
     plumber = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
     buffer = require('vinyl-buffer'),
-    merge = require('merge-stream');
+    merge = require('merge-stream'),
+    uglify = require('gulp-uglify');
 
 gulp.task('copy:fonts',async function () {
     return gulp.src('src/assets/fonts/*.*')
@@ -133,11 +134,8 @@ gulp.task('script:dev', async function() {
     return gulp.src('src/assets/js/**/*.js')
     .pipe(plumber())
     .pipe( sourcemaps.init())
-    .pipe(babel({
-        'presets':[
-            '@babel/preset-env'
-        ]
-    }))
+    .pipe(babel({'presets':['@babel/preset-env']}))
+    .pipe(concat('common-pub.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/assets/js'))
     .pipe(browserSync.reload({ stream : true }));
@@ -146,11 +144,9 @@ gulp.task('script:dev', async function() {
 gulp.task('script:build', async function() {
     return gulp.src('src/assets/js/**/*.js')
     .pipe(plumber())
-    .pipe(babel({
-        'presets':[
-            '@babel/preset-env'
-        ]
-    }))
+    .pipe(babel({'presets':['@babel/preset-env']}))
+    .pipe(uglify())
+    .pipe(concat('common-pub.min.js'))
     .pipe(gulp.dest('build/assets/js'))
     .pipe(browserSync.reload({ stream : true }));
 });
