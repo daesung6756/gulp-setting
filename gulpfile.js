@@ -24,10 +24,6 @@ var
     buffer = require('vinyl-buffer'),
     merge = require('merge-stream');
 
-gulp.task('clean', async function () {
-    return del('build');
-})
-
 gulp.task('copy:fonts',async function () {
     return gulp.src('src/assets/fonts/*.*')
     .pipe(plumber())
@@ -187,6 +183,10 @@ var watchCommon = function () {
     gulp.watch('src/assets/vendor/css/**/*.js', gulp.series(['vendorCss:build']))
     gulp.watch('src/assets/sprite/**/*.png', gulp.series(['images:sprite']))
 }
+
+gulp.task('clean', async function () {
+    return del('build');
+})
 
 gulp.task('watch:dev', async function()  {
     return [
